@@ -102,7 +102,7 @@ export default function WishList() {
                 <img
                   src={imgwishlist}
                   className="w-75 px-4"
-                  height={350}
+                  height={300}
                   alt=""
                 />
               </div>

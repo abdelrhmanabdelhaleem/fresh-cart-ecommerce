@@ -9,7 +9,8 @@ import { toast } from "react-toastify";
 
 export default function ProductsList() {
   let { addCart, loading } = useContext(CartContext);
-  let { addWishlist, removeWishlist, wishlist } = useContext(WishlistContext);
+  let { getWishlist, addWishlist, removeWishlist, wishlist } =
+    useContext(WishlistContext);
   const [currentWishList, setCurrentWishList] = useState([]);
 
   const [Products, setProducts] = useState();
@@ -51,6 +52,7 @@ export default function ProductsList() {
   };
   useEffect(() => {
     getProducts("");
+    getWishlist();
   }, []);
   let getProducts = async (Type) => {
     setProductsLoading(true);
